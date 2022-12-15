@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ActivityIndicator, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, Image, Button, Alert } from 'react-native';
 
 const BASE_URI = ""
 const IMAGES = ['https://images.pexels.com/photos/837745/pexels-photo-837745.jpeg',
@@ -15,6 +15,10 @@ export default function App() {
       <Image
         style={{ width: 350, height: 300 }}
         source={{ uri: IMAGES[0] }}
+      />
+      <Button
+        title="Press me for alert"
+        onPress={() => Alert.alert('Simple Button pressed')}
       />
       <StatusBar style="auto" />
     </View>
